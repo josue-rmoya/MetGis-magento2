@@ -1,0 +1,58 @@
+<div class="block block-login">
+    <div class="block-title"><strong>Login</strong></div>
+<form id="login-form" class="form form-login" action="http://localhost/magento2/customer/account/loginPost/referer/aHR0cDovL2xvY2FsaG9zdC9tYWdlbnRvMi8%2C/" method="post" novalidate="novalidate"><input name="form_key" type="hidden" value="wll7yW4tlVz16TbM">
+<div class="block-content"><label for="mini-login"></label> <input id="mini-login" class="input-text" title="Email" autocomplete="off" name="login[username]" type="email" value="" placeholder="E-mail" data-validate="{required:true, 'validate-email':true}" aria-required="true">
+<div class="gs-position-relative field password required"><label for="mini-password"></label> <input id="mini-password" class="input-text" name="login[password]" type="password" value="" placeholder="Password:" data-validate="{required:true}" aria-required="true">
+<div class="actions"><button class="button" type="submit">LogIn</button></div>
+</div>
+<div class="actions gs-actions"><a class="button" style="margin-right: 6px;" href="http://localhost/magento2/customer/account/create/">Register</a> <a class="button action remind" href="http://localhost/magento2/customer/account/forgotpassword/">Forgot Password?</a></div>
+</div>
+</form>
+</div>
+
+<div class="block block-search">
+
+    <div class="block-title"><strong><span>Search:</span></strong></div>
+    <div class="block-content">
+        <form id="search_mini_form1" action="http://localhost/magento2/catalogsearch/result/" method="get">
+            <div class="form-search">
+                <input id="search1" type="text" name="q" value="" class="input-text" maxlength="128">
+                <div class="gs-actions">
+                    <button type="submit" title="Search" class="button"><span><span>Search</span></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="block block-cart">
+        <div class="block-title">
+            <strong><span>My Cart</span></strong>
+        </div>
+        <div class="block-content">
+            <div class="gs-white-bg">
+               <p class="empty">There are<span class="gs-count-items-sidebar">&nbsp;0&nbsp;</span>items in your cart.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="gs_links_right_wrapper">
+        <ul class="links">
+            <li class="first last"><a href="https://www.metgis.com/shop/index.php/checkout/" title="Checkout" class="top-link-checkout">Checkout</a></li>
+        </ul>
+    </div>
+
+    <div class="block block-banner">
+        <div class="sidebar-banner">
+            <img src="<?= $this->getViewFileUrl('images/sofort.png') ?>" title="PayPal - VISA" alt="PayPal - VISA">
+        </div>
+    </div>
+
+    <div class="block block-banner">
+        <div class="sidebar-banner">
+            <img src="<?= $this->getViewFileUrl('images/austria_ssl.png') ?>" title="Austria - SSL" alt="Austria - SSL">
+        </div>
+    </div>
+
+</div>
+
+

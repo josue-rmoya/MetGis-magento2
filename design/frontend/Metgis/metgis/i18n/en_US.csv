@@ -1,0 +1,174 @@
+None,None
+"Special Price","Special Price"
+"Regular Price","Regular Price"
+"Buy %1 for: ","Buy %1 for: "
+"Click for price","Click for price"
+"Buy %1 for %2 each and <strong class=""benefit"">save<span class=""percent tier-%3"">&nbsp;%4</span>%</strong>","Buy %1 for %2 each and <strong class=""benefit"">save<span class=""percent tier-%3"">&nbsp;%4</span>%</strong>"
+"Buy %1 for %2 each","Buy %1 for %2 each"
+"You added product %1 to the <a href=""%2"">comparison list</a>.","You added product %1 to the <a href=""%2"">comparison list</a>."
+"Shop By","Shop By"
+"Shopping Options","Shopping Options"
+Category,Category
+"Compare Products","Compare Products"
+"Print This Page","Print This Page"
+"Remove Product","Remove Product"
+Product,Product
+"Add to Cart","Add to Cart"
+"In stock","In stock"
+"Out of stock","Out of stock"
+"Add to Wish List","Add to Wish List"
+"You have no items to compare.","You have no items to compare."
+"Remove This Item","Remove This Item"
+Compare,Compare
+"Clear All","Clear All"
+"Close Window","Close Window"
+Prev,Prev
+Next,Next
+"We can't find products matching the selection.","We can't find products matching the selection."
+Details,Details
+"Add to Compare","Add to Compare"
+"Related Products","Related Products"
+"We found other products you might like!","We found other products you might like!"
+"More Choices:","More Choices:"
+"New Products","New Products"
+"Check items to add to the cart or","Check items to add to the cart or"
+"select all","select all"
+"Items %1-%2 of %3","Items %1-%2 of %3"
+"%1 Item","%1 Item"
+"%1 Items","%1 Items"
+Show,Show
+"per page","per page"
+"Sort By","Sort By"
+"Set Ascending Direction","Set Ascending Direction"
+"Set Descending Direction","Set Descending Direction"
+"View as","View as"
+"Learn More","Learn More"
+Qty,Qty
+"More Information","More Information"
+Email,Email
+Change,Change
+Delete,Delete
+"Compatible file extensions to upload","Compatible file extensions to upload"
+"Maximum image width","Maximum image width"
+px.,px.
+"Maximum image height","Maximum image height"
+"Maximum %1 characters","Maximum %1 characters"
+"* Required Fields","* Required Fields"
+Availability,Availability
+"Contact Information","Contact Information"
+Name,Name
+"Phone Number","Phone Number"
+"What’s on your mind?","What’s on your mind?"
+Submit,Submit
+"Address Book","Address Book"
+"Manage Addresses","Manage Addresses"
+"Default Billing Address","Default Billing Address"
+"Edit Address","Edit Address"
+"Default Shipping Address","Default Shipping Address"
+"Account Information","Account Information"
+Edit,Edit
+"Change Password","Change Password"
+Newsletters,Newsletters
+"You are subscribed to ""General Subscription"".","You are subscribed to ""General Subscription""."
+"You aren't subscribed to our newsletter.","You aren't subscribed to our newsletter."
+or,or
+Back,Back
+"My Account","My Account"
+"Default Addresses","Default Addresses"
+"Change Billing Address","Change Billing Address"
+"You have no default billing address in your address book.","You have no default billing address in your address book."
+"Change Shipping Address","Change Shipping Address"
+"You have no default shipping address in your address book.","You have no default shipping address in your address book."
+Address,Address
+"Street Address: Line %1","Street Address: Line %1"
+"Street Address %1","Street Address %1"
+City,City
+"It's a default billing address.","It's a default billing address."
+"Use as my default billing address","Use as my default billing address"
+"It's a default shipping address.","It's a default shipping address."
+"Use as my default shipping address","Use as my default shipping address"
+"Save Address","Save Address"
+"Go back","Go back"
+"Additional Address Entries","Additional Address Entries"
+"Additional addresses","Additional addresses"
+"First Name","First Name"
+"Last Name","Last Name"
+"Street Address","Street Address"
+Country,Country
+State,State
+"Zip/Postal Code","Zip/Postal Code"
+Phone,Phone
+Actions,Actions
+"You have no other address entries in your address book.","You have no other address entries in your address book."
+"Add New Address","Add New Address"
+"Please enter your email below and we will send you the confirmation link.","Please enter your email below and we will send you the confirmation link."
+"Send confirmation link","Send confirmation link"
+"Back to Sign In","Back to Sign In"
+"Change Email","Change Email"
+"Change Email and Password","Change Email and Password"
+"Current Password","Current Password"
+"New Password","New Password"
+"Password Strength","Password Strength"
+"No Password","No Password"
+"Confirm New Password","Confirm New Password"
+Save,Save
+"Retrieve your password here","Retrieve your password here"
+"Please enter your email address below to receive a password reset link.","Please enter your email address below to receive a password reset link."
+"Reset My Password","Reset My Password"
+"Registered Customers","Registered Customers"
+"If you have an account, sign in with your email address.","If you have an account, sign in with your email address."
+Password,Password
+"Sign In","Sign In"
+"Forgot Your Password?","Forgot Your Password?"
+"Subscription option","Subscription option"
+"General Subscription","General Subscription"
+"Personal Information","Personal Information"
+"Sign Up for Newsletter","Sign Up for Newsletter"
+"Address Information","Address Information"
+"Please select a region, state or province.","Please select a region, state or province."
+"Login Information","Login Information"
+"Confirm Password","Confirm Password"
+"Create an Account","Create an Account"
+"Set a New Password","Set a New Password"
+"You have signed out and will go to our homepage in 5 seconds.","You have signed out and will go to our homepage in 5 seconds."
+"This account is not confirmed. <a href=""%1"">Click here</a> to resend confirmation email.","This account is not confirmed. <a href=""%1"">Click here</a> to resend confirmation email."
+"You must confirm your account. Please check your email for the confirmation link or <a href=""%1"">click here</a> for a new link.","You must confirm your account. Please check your email for the confirmation link or <a href=""%1"">click here</a> for a new link."
+"There is already an account with this email address. If you are sure that it is your email address, <a href=""%1"">click here</a> to get your password and access your account.","There is already an account with this email address. If you are sure that it is your email address, <a href=""%1"">click here</a> to get your password and access your account."
+"If you are a registered VAT customer, please <a href=""%1"">click here</a> to enter your billing address for proper VAT calculation.","If you are a registered VAT customer, please <a href=""%1"">click here</a> to enter your billing address for proper VAT calculation."
+"If you are a registered VAT customer, please <a href=""%1"">click here</a> to enter your shipping address for proper VAT calculation.","If you are a registered VAT customer, please <a href=""%1"">click here</a> to enter your shipping address for proper VAT calculation."
+"New Customers","New Customers"
+"Creating an account has many benefits: check out faster, keep more than one address, track orders and more.","Creating an account has many benefits: check out faster, keep more than one address, track orders and more."
+Company,Company
+Fax,Fax
+"Your Language:","Your Language:"
+"Your Language","Your Language"
+"Select Store","Select Store"
+"Items %1 to %2 of %3 total","Items %1 to %2 of %3 total"
+"%1 Item(s)","%1 Item(s)"
+Page,Page
+Previous,Previous
+"You're currently reading page","You're currently reading page"
+Overview,Overview
+"Skip to the end of the images gallery","Skip to the end of the images gallery"
+"Skip to the beginning of the images gallery","Skip to the beginning of the images gallery"
+"Recently Compared","Recently Compared"
+Image,Image
+Price,Price
+"Add To Cart","Add To Cart"
+"Add To Compare","Add To Compare"
+"Learn more","Learn more"
+"Recently Viewed","Recently Viewed"
+"Catalog Advanced Search","Catalog Advanced Search"
+"Advanced Search","Advanced Search"
+"Edit Account Information","Edit Account Information"
+"Password forgotten","Password forgotten"
+"You are signed out","You are signed out"
+"Impressum","Imprint"
+"KONTAKT","CONTACT"
+"Kontakt","Contact"
+"ANMELDEN","SIGN IN"
+"Anmelden","Sign In"
+"E-mail/Nutzername","E-Mail/Username"
+"Suche","Search"
+"Kennwort","Password"
+"Neuanmeldung","Register"

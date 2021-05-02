@@ -1,0 +1,38 @@
+
+
+<div class="fusion_headerLogo">
+    <a href="<?php echo $this->getBaseUrl(); ?>" title="MetGIS GmbH" class="logo">
+        <!-- <p style="color:transparent">Home</p> -->
+        <figure>
+        <img src="<?= $this->getViewFileUrl('images/logo.png') ?>" alt="MetGIS GmbH">
+</figure>
+    </a>
+</div>
+    
+    
+<div class="mod-languages" data-ui-id="language-switcher" id="switcher-language">
+        <div class="actions dropdown options switcher-options">
+                                                                                  
+            <div class="action toggle switcher-trigger" id="switcher-language-trigger" data-toggle="dropdown" data-trigger-keypress-button="true" aria-haspopup="true" aria-expanded="false" role="button" tabindex="0">
+                            
+                <ul class="dropdown switcher-dropdown" data-target="dropdown" aria-hidden="true">
+                    <li class="view-de switcher-option">
+                        <a href="http://metgis.com.w01b0c21.kasserver.com/index.php/stores/store/redirect/___store/de/___from_store/de/uenc/aHR0cDovL2xvY2FsaG9zdC9tYWdlbnRvMi8_X19fc3RvcmU9ZGU%2C/">
+                            <img src="<?= $this->getViewFileUrl('images/de.gif') ?>" alt="DE">
+                        </a>
+                    </li>
+                    <li class="view-en switcher-option">
+                        <a href="http://metgis.com.w01b0c21.kasserver.com/index.php/stores/store/redirect/___store/en/___from_store/de/uenc/aHR0cDovL2xvY2FsaG9zdC9tYWdlbnRvMi8_X19fc3RvcmU9ZW4%2C/">
+                            <img src="<?= $this->getViewFileUrl('images/en.gif') ?>" alt="EN">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+    

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="contact-imprint" htmlTag="div" htmlClass="quick-access"> 
+                    <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contact/contact/enabled" name="contact-us-link">
+                        <arguments>
+                            <argument name="label" xsi:type="string" translate="true">Contact</argument>
+                            <argument name="path" xsi:type="string">contact</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="impressum-link">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">impressum-link</argument>
+                        </arguments>
+                    </block>
+            </container> 
+        </referenceContainer>
+    </body>
+</page>

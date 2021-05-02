@@ -1,0 +1,19 @@
+
+
+<div class="fusion_headerLogo">
+    <a href="<?php echo $this->getBaseUrl(); ?>" title="MetGIS GmbH" class="logo">
+        <!-- <p style="color:transparent">Home</p> -->
+        <figure>
+        <img src="<?= $this->getViewFileUrl('images/logo.png') ?>" alt="MetGIS GmbH">
+</figure>
+    </a>
+</div>
+    
+    
+
+
+
+
+
+
+    

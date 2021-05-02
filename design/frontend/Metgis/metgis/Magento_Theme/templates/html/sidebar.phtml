@@ -1,0 +1,102 @@
+<?php
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Checkout\Helper\Cart $helper */
+/** @var $block \Magento\Checkout\Block\Cart */
+   
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart'); 
+    //$cart2 = $objectManager->get('\Magento\Checkout\Helper\Cart'); 
+    
+    //$totalItems = $cart->getQuote()->getItemsCount();
+    $totalQuantity = $cart->getQuote()->getItemsQty();
+    //$total = $cart2 ->getSummaryCount();
+    //$helper = $this->helper('\Magento\Checkout\Helper\Cart') ;
+    
+    if ($totalQuantity<>null) {
+       $cart_items =  number_format($totalQuantity);
+    }
+    else {
+        $cart_items = 0;
+    } 
+?>
+
+<div class="block block-login">
+    <div class="block-title"><i class="fas fa-lock"></i><strong><?= $escaper->escapeHtml(__('Sign In'))?></strong></div>
+    <form id="login-form" class="form form-login" action="<?= $this->getBaseUrl().'customer/account/loginPost/'?>" method="post" novalidate="novalidate">
+        <input name="form_key" type="hidden" value="gyI8mCO0FDvJnJYR">
+        <div class="block-content">
+            <label for="mini-login"></label> 
+            <input id="mini-login" class="input-text" title="Email" autocomplete="off" name="login[username]" type="email" value="" placeholder="<?= __('E-mail/Username')?>" data-validate="{required:true, 'validate-email':true}" aria-required="true">
+            <div class="gs-position-relative field password required">
+                <label for="mini-password"></label> 
+                <input id="mini-password" class="input-text" title="<?= $escaper->escapeHtml(__('Password')) ?>" name="login[password]" type="password" value="" placeholder="<?= $escaper->escapeHtml(__('Password:')) ?>" data-validate="{required:true}" aria-required="true">
+                <div class="actions">
+                    <button class="button" type="submit" title="LogIn">
+                        <span class="button-caption">LogIn</span>
+                    </button>
+                </div>
+            </div>
+            <div class="actions gs-actions">
+                <a class="button" title="<?= $escaper->escapeHtml(__('Register')) ?>" style="margin-right: 6px;" href="<?= $this->getBaseUrl().'customer/account/create/'?>">
+                    <span class="button-caption"><?= $escaper->escapeHtml(__('Register')) ?></span>
+                </a> 
+                <a class="button action remind" title="<?= $escaper->escapeHtml(__('Forgot your password?'))?>" href="<?= $this->getBaseUrl().'customer/account/forgotpassword/'?>">
+                    <span class="button-caption"><?= $escaper->escapeHtml(__('Forgot your password?'))?></span>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="block block-search">
+    <div class="block-title"><i class="fas fa-search"></i><strong><?= $escaper->escapeHtml(__('Search'))?></strong></div>
+    <div class="block-content">
+        <form id="search_mini_form1" action="<?= $this->getBaseUrl().'catalogsearch/result/'?>" method="get">
+            <div class="form-search">
+                <input id="search1" class="input-text" maxlength="128" name="q" type="text" value="">
+                <div class="gs-actions">
+                    <button class="button" title="<?= __('Search') ?>" type="submit">
+                        <span class="button-caption"><?= __('Search') ?></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="block block-cart">
+        <div class="block-title"><strong><?= __('My cart') ?></strong></div>
+        <div class="block-content">
+            <div class="gs-white-bg"> 
+                <p class="empty"><?= __('There are') ?><span class="gs-count-items-sidebar"><?= $cart_items ?></span><?= __('items in your cart') ?></p>
+            </div>
+        </div>
+    </div>
+   
+
+    <div id="gs_links_right_wrapper">
+        <ul class="links">
+            <li class="first last">
+                <a class="top-link-checkout" title="<?= __('Checkout') ?>" href="<?= $this->getBaseUrl().'checkout/'?>"><?= __('Checkout') ?><i class="fas fa-angle-right"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="block block-banner">
+    <div class="sidebar-banner">
+        <img src="<?= $this->getViewFileUrl('images/sofort.png') ?>" title="PayPal - VISA" alt="PayPal - VISA">
+    </div>
+</div>
+
+<div class="block block-banner">
+    <div class="sidebar-banner">
+        <img src="<?= $this->getViewFileUrl('images/austria_ssl.png') ?>" title="Austria - SSL" alt="Austria - SSL">
+    </div>
+</div>
+
+
+
+

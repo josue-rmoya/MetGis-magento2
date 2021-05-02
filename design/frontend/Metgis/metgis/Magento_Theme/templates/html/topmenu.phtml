@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?= /* @noEscape */ $_menuHtml?>
+        <?= $block->getChildHtml() ?>
+        
+        <li class="gs-uber-uns-link" role="presentation">
+            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('uber-uns')->toHtml();?>
+        </li>
+        
+        <li class="level0 nav-8 last level-top gs-top-menu-text">
+            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-menu-text')->toHtml();?>
+        </li>
+    </ul>
+</nav>

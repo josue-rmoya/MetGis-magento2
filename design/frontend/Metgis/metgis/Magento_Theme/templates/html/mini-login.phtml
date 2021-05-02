@@ -1,0 +1,144 @@
+<?php
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Checkout\Helper\Cart $helper */
+/** @var \Magento\Customer\Block\Form\Login $block */
+/** @var \Magento\Customer\Block\Form\Login\Info $new */
+/** @var \Magento\Theme\Block\Html\Header $customsession */
+
+
+   
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $block = $objectManager->get('\Magento\Customer\Block\Form\Login'); 
+    $new = $objectManager->get('\Magento\Customer\Block\Form\Login\Info'); 
+    
+    $customerSession = $objectManager->get('Magento\Customer\Model\Session');
+    $block_links = $objectManager->get('\Magento\Framework\View\Element\Html\Links');
+    $addr_block = $objectManager->get('\Magento\Customer\Block\Account\Dashboard\Address');
+    $myaccount_block = $objectManager->get('\Magento\Customer\Block\Account\Link');
+    $news_block = $objectManager->get('\Magento\Customer\Block\Account\Dashboard\Info');
+    /**
+ * Customer login form template
+ *
+ * @see \Magento\Customer\Block\Form\Login
+ * @var $block \Magento\Customer\Block\Form\Login
+ */
+
+$usernameLabel =  __('Email');
+$usernameInputType = 'email';
+$usernameInputValidation = ", 'validate-email':true";
+
+if ($this->helper('\Diglin\Username\Helper\Customer')->isEnabled()) {
+    $usernameLabel =  __('Email/Username');
+    $usernameInputType = 'text';
+    $usernameInputValidation = "";
+}
+
+   
+?>
+
+<?php if ($customerSession->isLoggedIn()) :?>
+    <div class="block block-myaccount">
+        <div class="block-title">
+            <i class=" fas fa-user-check"></i><strong><?= $escaper->escapeHtml(__('My Account'))?></strong>
+        </div>
+        <div class="block-content">
+        <ul class="customer">
+            <li class="customer customer-logout">
+                <a href="<?= $this->getBaseUrl().'customer/account/logout/'?>"><span><?= __('Sign out') ?></span></a>
+            </li>
+            <li class="customer customer-my-account">
+                <a <?= /* @noEscape */ $myaccount_block->getLinkAttributes() ?>><span><?= $escaper->escapeHtml($myaccount_block->getLabel()) ?></span></a>
+            </li>
+            <li class="customer customer-info">
+                <a href="<?= $this->getBaseUrl().'customer/account/edit/'?>"><span><?= __('Account Information') ?></span></a>
+            </li>
+            <li class="customer customer-address">
+                <a href="<?= $addr_block->escapeUrl($addr_block->getAddressBookUrl()) ?>"><span><?= __('Address Book') ?></span></a>
+            </li>
+            <li class="customer customer-subscription">
+                <a href="<?= $news_block->escapeUrl($news_block->getUrl('newsletter/manage')) ?>"><span><?= __('My Subscriptions') ?></span></a>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    
+    <script>
+        
+        require(['jquery'], function($){
+            $('.block-account').show();
+            $('.block-login').hide();
+        });
+      
+    </script>
+<?php else :?>
+    <div class="block block-login">
+        <div class="block-title">
+            <i class="fas fa-lock"></i><strong><?= $escaper->escapeHtml(__('Sign In'))?></strong>
+        </div>
+        <form id="login-form" class="form form-login" 
+            action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" 
+            method="post"
+            data-mage-init='{"validation":{}}'>
+            <?= $block->getBlockHtml('formkey') ?>
+            <div class="block-content">
+                <label for="email"></label> 
+                <input name="login[username]" 
+                 value="<?php echo $block->escapeHtml($block->getUsername()) ?>" 
+                 <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> 
+                 id="email" type="<?php echo $usernameInputType; ?>" 
+                 class="input-text" 
+                 placeholder="<?= __('E-mail/Username')?>" 
+                 title="<?php /* @escapeNotVerified */  echo $usernameLabel ?>" 
+                 data-validate="{required:true<?php echo $usernameInputValidation; ?>}">
+                <div class="gs-position-relative field password required">
+                    <label for="pass"></label> 
+                    <input id="pass" class="input-text" 
+                        title="<?= $block->escapeHtmlAttr(__('Password')) ?>"
+                        name="login[password]" type="password"
+                        placeholder="<?= $escaper->escapeHtml(__('Password:')) ?>" 
+                        data-validate="{required:true}" 
+                        aria-required="true">
+                    <div class="actions">
+                        <button type="submit" class="button action login" title="LogIn" name="send" id="send2">
+                            <span class="button-caption">LogIn</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="actions gs-actions">
+                    <a class="button" 
+                    title="<?= $escaper->escapeHtml(__('Register')) ?>" 
+                    style="margin-right: 6px;" 
+                    href="<?= $new->escapeUrl($new->getCreateAccountUrl()) ?>">
+                        <span class="button-caption"><?= $escaper->escapeHtml(__('Register')) ?></span>
+                    </a> 
+                    <a class="button action remind" title="<?= $escaper->escapeHtml(__('Forgot your password?'))?>" href="<?= $block->escapeUrl($block->getForgotPasswordUrl()) ?>">
+                        <span class="button-caption"><?= $escaper->escapeHtml(__('Forgot your password?'))?></span>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        
+        require(['jquery'], function($){
+            $('.block-account').hide();
+            $('.block-login').show();
+        });
+      
+    </script>
+
+<?php endif; ?>
+
+    
+
+
+    
+
+
+       
+    
+
+
+

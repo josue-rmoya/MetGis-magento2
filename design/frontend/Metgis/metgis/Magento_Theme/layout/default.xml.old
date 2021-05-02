@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+ 
+        <referenceContainer name="header.container">
+
+            <!-- remove header elements -->
+            <referenceBlock name="header_link" remove="true" />
+            <referenceBlock name="logo" remove="true"/>
+            <referenceBlock name="minicart" remove="true" />
+            <referenceBlock name="top.search" remove="true"/>
+            <referenceBlock name="catalog.compare.link" remove="true"/>
+
+            <!-- logo -->
+            <referenceBlock name="logo">
+                <arguments>
+                    <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                    <argument name="logo_img_width" xsi:type="number">300</argument>
+                    <argument name="logo_img_height" xsi:type="number">170</argument>
+                </arguments>
+            </referenceBlock>
+            
+            <!-- new header -->
+            <container name="new-header" htmlTag="div" htmlClass="fusionHeader" after="header_link">
+                <block class="Magento\Framework\View\Element\Template" name="fusion-header" before="-" template="Magento_Theme::html/header/header.phtml" cacheable="false" />
+                <container name="block-header" htmlTag="div" htmlClass="gs-header-link">
+                        <block class="Magento\Cms\Block\Block" name="static_header_link">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">header_link</argument>
+                                </arguments>
+                        </block>
+                    </container>
+            </container>
+
+            <container name="top-menu-text" htmlTag="div" htmlClass="gs-top-menu-text" after="-">
+                <block class="Magento\Cms\Block\Block" name="static_topmenu_link">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">top-menu-text</argument>
+                    </arguments>
+                </block>
+            </container>
+
+        </referenceContainer>
+
+        <!-- move minicart into header.panel -->
+        <!-- <move element="minicart" destination="header_link" before="top.links"/> -->
+
+        <move element="page.main.title" destination="content" before="-"/>
+
+        <!-- new footer -->
+            
+        <referenceContainer name="footer">
+
+            <!-- clear foooter elements -->
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="form.subscribe" remove="true" />
+            <referenceBlock name="copyright" remove="true" />
+            <referenceBlock name="report.bugs" remove="true" />
+
+            <!-- new footer -->
+            <container name="new-footer" htmlTag="div" htmlClass="footer" after="-">
+                
+                <block class="Magento\Framework\View\Element\Template" name="enlacesFooter" before="-" as="enlacesFooter" template="Magento_Theme::html/footer/footer.phtml" cacheable="false" />
+
+            <container name="foooter-links" htmlTag="div" htmlClass="gs-footer-bottom">
+                    
+                    <block class="Magento\Cms\Block\Block" name="static_footer_link">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer_link</argument>
+                            </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="static_footer_text">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer_text</argument>
+                            </arguments>
+                    </block>
+
+                </container>
+
+            </container>
+
+        </referenceContainer>
+        
+        <!-- side bar -->
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+
+
+        <referenceContainer name="sidebar.main" remove="true" />
+        
+        <referenceContainer name="sidebar.additional">
+            
+            <block class="Magento\Cms\Block\Block" name="static-sidebar-block" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">sidebar-block</argument>
+                </arguments>
+            </block>
+            
+            <block class="Magento\Framework\View\Element\Template" name="product_view_custom_block" template="Magento_Theme::html/sidebar/sidebar.phtml"/>
+
+        </referenceContainer>
+ 
+    </body>
+</page>

@@ -1,0 +1,50 @@
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+ 
+    <referenceContainer name="header.container">
+ 
+        <!-- remove header elements -->
+        <referenceBlock name="header_link" remove="false" />
+        <referenceBlock name="logo" remove="true"/>
+        <referenceBlock name="minicart" remove="false" />
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+ 
+        <!-- logo -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.gif</argument>
+                <argument name="logo_img_width" xsi:type="number">300</argument>
+                <argument name="logo_img_height" xsi:type="number">300</argument>
+            </arguments>
+        </referenceBlock>
+ 
+       <!-- new header -->
+       <container name="new-header" htmlTag="div" htmlClass="fusionHeader" after="header_link">
+           <block class="Magento\Framework\View\Element\Template" name="fusion-header" before="-" template="Magento_Theme::html/header/header.phtml" cacheable="false" />
+       </container>
+ 
+    </referenceContainer>
+ 
+    <!-- move minicart into header.panel -->
+    <move element="minicart" destination="header_link" before="top.links"/>
+ 
+    <!-- new footer -->
+    <referenceContainer name="footer">
+ 
+        <!-- clear foooter elements -->
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+ 
+        <!-- new footer -->
+        <container name="enlaces" htmlTag="div" htmlClass="enlaces" after="-">
+            <block class="Magento\Framework\View\Element\Template" name="enlacesFooter" before="-" as="enlacesFooter" template="Magento_Theme::html/footer/footer.phtml" cacheable="false" />
+        </container>
+ 
+    </referenceContainer>
+ 
+    </body>
+</page>
